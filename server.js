@@ -12,5 +12,17 @@ const app = express();
 //data request
 const { notes } = require('./data/db.json');
 
+
+// parse string data
+app.use(express.urlencoded ( { extended: true }));
+
+app.use(express.json());
+
+
 // listen on port
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
+
+
+
+
+
