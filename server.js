@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path'); 
 
 // Port assign
-const PORT = process.env.PORT; 
-//const PORT = 8080; 
+const PORT = process.env.PORT || 8080; 
 
 // server instantiate
 const app = express(); 
@@ -93,7 +92,7 @@ const { notes } = require('./develop/db/db.json');
         }); 
 
 
-        app.listen(process.env.PORT, () => {
+        app.listen(PORT, () => {
             console.log(`API server now on port ${PORT}!`);
         });
         
