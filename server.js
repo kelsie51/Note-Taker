@@ -13,7 +13,7 @@ app.use(express.urlencoded ( { extended: true }));
 
 app.use(express.json());
 
-app.use(express.static('public')); 
+app.use(express.static('Develop')); 
 
 
 //data request
@@ -66,6 +66,19 @@ const { notes } = require('./develop/db/db.json');
             }
         });
         
+        app.delete('/api/notes/:id', (req, res) => {
+            const id = req.params.id;
+            let note;
+        
+            notes.map((element, index) => {
+              if (element.id == id){
+                note = element
+                notes.splice(index, 1)
+                return res.json(note);
+              } 
+            
+            })
+        });
         
         
         //index.html rt
