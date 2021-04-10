@@ -51,7 +51,7 @@ const { notes } = require('./develop/db/db.json');
         
         // retrieve amd store data on server-side
         app.post('/api/notes', (req, res) => {
-            // set id based on what the next index of the array will be 
+            // set id  
             req.body.id = notes.length.toString(); 
             
             // Error handling
