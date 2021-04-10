@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path'); 
 
 // Port assign
-const PORT = process.env.PORT || 8080; 
+const PORT = process.env.PORT; 
 
 // server instantiate
 const app = express(); 
