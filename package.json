@@ -8,11 +8,10 @@
     "fs": "0.0.1-security"
   },
   "scripts": {
-    "start": "npm server.js"
+    "start": "node server.js"
   },
   "author": "Kelsie L",
   "license": "ISC",
-  
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
